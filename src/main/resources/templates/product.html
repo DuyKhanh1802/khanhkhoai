@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>Chào mừng b đến vs trang sản phẩm</h1>
+    <h1 th:text="${'role' + role}"></h1>
+    <p th:if="${role == 1}">
+        <a th:href="@{/create/product}">Create</a>
+        <a th:href="@{/update/product}">Update</a>
+    <form th:action="@{/product}" method="get">
+        <input type="text" name="key">
+        <button type="submit">Submit</button>
+    </form>
+    <table>
+        <thead>
+        <tr>Id</tr>
+        <tr>Name</tr>
+        <tr>Price</tr>
+        </thead>
+
+        <tbody>
+        <td>Có</td>
+        <td>Một</td>
+        <td th:text="${key}"></td>
+        </tbody>
+    </table>
+    </p>
+
+
+
+    <p>
+        <a th:href="@{/logout}">Logout</a>
+    </p>
+
+</head>
+<body>
+
+</body>
+</html>
